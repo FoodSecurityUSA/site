@@ -1,8 +1,141 @@
 <html>
   <head>
     <title>Food Security USA</title>
+    <style>
+      /*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      * {
+        margin: 0;
+      }
+
+      body {
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      img,
+      picture,
+      video,
+      canvas,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+
+      input,
+      button,
+      textarea,
+      select {
+        font: inherit;
+      }
+
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        overflow-wrap: break-word;
+      }
+
+      #root,
+      #__next {
+        isolation: isolate;
+      }
+    </style>
+    <style>
+      body {
+        margin: 0 0 5rem;
+        font-family: Bahnschrift, "DIN Alternate", "Franklin Gothic Medium",
+          "Nimbus Sans Narrow", sans-serif-condensed, sans-serif;
+        font-size: 1.125rem;
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns:
+          1fr
+          min(65ch, 100%)
+          1fr;
+        grid-column-gap: 32px;
+      }
+
+      .content > * {
+        grid-column: 2;
+      }
+
+      .full-bleed {
+        width: 100%;
+        grid-column: 1 / 4;
+      }
+
+      .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 400px;
+        aspect-ratio: 16 / 9;
+
+        margin-block-end: 3rem;
+
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("hero.jpeg"), lightgreen;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .hero * {
+        color: white;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        padding: 1rem 0;
+      }
+
+      nav .items {
+        margin-inline-start: auto;
+      }
+
+      .mission {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+      }
+    </style>
   </head>
+
   <body>
-    <h1>Food Security USA</h1>
+    <main class="content">
+      <nav>
+        <h2>Food Security USA</h2>
+        <div class="items">
+          <a href="#our-mission">Our Mission</a>
+        </div>
+      </nav>
+
+      <div class="full-bleed hero">
+        <h1>Food is not a weapon.</h1>
+        <h2>Become independent.</h2>
+      </div>
+
+      <div class="mission">
+        <h2 id="our-mission">Our Mission</h2>
+        <p>Empowering everyone to grow their own food and be self-sufficient is what drives us.</p>
+        <p>We believe in the power of every individual to cultivate their own fresh, healthy produce, no matter where they are.</p>
+        <p>Our mission is simple: to inspire and support people in taking control of their food supply, fostering independence, and creating a healthier, more sustainable future for all.</p>
+      </div>
+    </main>
   </body>
 </html>
